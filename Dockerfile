@@ -1,8 +1,13 @@
+FROM kalilinux/kali-linux-docker
+RUN set -x \ 
+    && apt-get update -qqy && apt-get upgrade -qqy \
+    && apt-get install -qqy gpg mosquitto mosquitto-clients nmap python3 python3-pip snort wireshark \
+    && apt-get autoremove -qqy
+RUN pip3 install paho-mqtt
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VCS_URL
 ARG VERSION
-FROM kalilinux/kali-linux-docker
 LABEL   org.label-schema.build-date=$BUILD_DATE \
         org.label-schema.name="KaliLinuxDocker" \
         org.label-schema.description="Kali Linux with some tools" \
@@ -12,10 +17,5 @@ LABEL   org.label-schema.build-date=$BUILD_DATE \
         org.label-schema.vendor="Lokeon" \
         org.label-schema.version=$VERSION \
         org.label-schema.schema-version="1.0" 
-RUN set -x \ 
-    && apt-get update -qqy && apt-get upgrade -qqy \
-    && apt-get install -qqy gpg mosquitto mosquitto-clients nmap python3 python3-pip snort wireshark \
-    && apt-get autoremove -qqy
-RUN pip3 install paho-mqtt
 
     
