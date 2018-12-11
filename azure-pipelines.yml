@@ -2,7 +2,5 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- script: PSWD=$(pswd)
-  displayName: password as env variable
-- script: make release
+- script: make PSWD=$(pswd) release
   displayName: build and push to docker hub

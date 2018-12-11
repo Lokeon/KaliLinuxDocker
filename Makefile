@@ -1,5 +1,6 @@
 release: docker_build docker_login docker_push output
 dockerId ?= lokeon
+PSWD=""
 DOCKER_IMAGE = $(dockerId)/kali
 GIT_COMMIT = $(strip $(shell git rev-parse --short HEAD))
 CODE_VERSION = $(strip $(shell cat VERSION))
