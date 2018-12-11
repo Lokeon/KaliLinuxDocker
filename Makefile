@@ -15,7 +15,7 @@ $(error You need to create a VERSION file to build a release)
 endif
 
 docker_login:
-	docker login -u $(dockerId) -p $(pswd)
+	docker login -u $(dockerId) -p $(PSWD)
 
 docker_build:
 	docker build \
