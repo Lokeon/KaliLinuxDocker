@@ -1,5 +1,6 @@
 ARG BUILD_DATE
 ARG VCS_REF
+ARG VCS_URL
 ARG VERSION
 FROM kalilinux/kali-linux-docker
 LABEL   org.label-schema.build-date=$BUILD_DATE \
