@@ -4,7 +4,7 @@ DOCKER_IMAGE = $(dockerId)/kali
 GIT_COMMIT = $(strip $(shell git rev-parse --short HEAD))
 CODE_VERSION = $(strip $(shell cat VERSION))
 
-ifeq ($(MAKECMDGOALS),release)
+ifeq ($(MAKECMDGOALS),release) 
 DOCKER_TAG = $(CODE_VERSION)
 else
 DOCKER_TAG = $(CODE_VERSION)-$(GIT_COMMIT)
