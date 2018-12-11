@@ -10,7 +10,7 @@ LABEL   org.label-schema.build-date=$BUILD_DATE \
         org.label-schema.vcs-url=$VCS_URL \
         org.label-schema.vendor="Lokeon" \
         org.label-schema.version=$VERSION \
-        org.label-schema.schema-version="1.0"
+        org.label-schema.schema-version="1.0" 
 RUN set -x \ 
     && apt-get update -qqy && apt-get upgrade -qqy \
     && apt-get install -qqy gpg mosquitto mosquitto-clients nmap python3 python3-pip snort wireshark \

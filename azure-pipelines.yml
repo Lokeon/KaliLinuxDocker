@@ -1,5 +1,6 @@
 pool:
   vmImage: 'Ubuntu 16.04'
+  
 steps:
 - script: make release
   displayName: build and push to docker hub
