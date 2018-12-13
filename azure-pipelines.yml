@@ -4,3 +4,5 @@ pool:
 steps:
 - script: make PSWD=$(pswd) release
   displayName: build and push to docker hub
+- script: curl -X POST https://hooks.microbadger.com/images/lokeon/kali/Cusz0GWCmGimDK4Zg1nrU4k64lg\=
+  displayName: Update MicroBadger
