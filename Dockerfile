@@ -16,6 +16,7 @@ LABEL   org.label-schema.build-date=$BUILD_DATE \
         org.label-schema.vcs-url=$VCS_URL \
         org.label-schema.vendor="Lokeon" \
         org.label-schema.version=$VERSION \
-        org.label-schema.schema-version="1.0" 
+        org.label-schema.schema-version="1.0" \
+        MANTAINER="Kevin López <kevin.lopezcala99@gmail.com>" 
 
     
